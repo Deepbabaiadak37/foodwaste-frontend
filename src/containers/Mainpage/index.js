@@ -36,7 +36,7 @@ handleChange2= event =>{
 		if(event.target.value=="")
 		{
 				
-		axios.get('http://127.0.0.1:3030/userroutes/availabefood').then(response => {
+		axios.get('https://foodwaste-backend.herokuapp.com/userroutes/availabefood').then(response => {
 			            
 			            this.setState({people : response.data})
 			            console.log("hagu")
@@ -50,7 +50,7 @@ handleChange2= event =>{
 
 handleSearch= () =>{
 					
-			 axios.get('http://127.0.0.1:3030/userroutes/availabefood?city='+this.state.city ).then(response => {
+			 axios.get('https://foodwaste-backend.herokuapp.com/userroutes/availabefood?city='+this.state.city ).then(response => {
 	            
 	            this.setState({people : response.data})
 	          // console.log(this.state.person);    
@@ -80,7 +80,7 @@ addlist = (a) =>{
 
 		var config={
 			method : 'patch',
-			url : 'http://127.0.0.1:3030/userroutes/auth/claimfood',
+			url : 'https://foodwaste-backend.herokuapp.com/userroutes/auth/claimfood',
 			headers : {
 				'authorization' : 'Bearer '+tok,
 				'Content-Type' : 'application/json'
@@ -128,7 +128,7 @@ if(ls=="false")
 
 		if ( this.state.key)	
 	{		
-		axios.get('http://127.0.0.1:3030/userroutes/availabefood').then(response => {
+		axios.get('https://foodwaste-backend.herokuapp.com/userroutes/availabefood').then(response => {
 			            
 			            this.setState({people : response.data})
 			            console.log("hagu")
