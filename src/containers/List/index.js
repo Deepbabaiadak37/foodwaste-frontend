@@ -54,7 +54,7 @@ if(ls=="false")
 		
 		var config={
 			method : 'get',
-			url : 'http://127.0.0.1:3030/userroutes/auth/claimedlist',
+			url : 'https://foodwaste-backend.herokuapp.com/userroutes/auth/claimedlist',
 			headers : {
 				'authorization' : 'Bearer '+tok,
 				'Content-Type' : 'application/json'
